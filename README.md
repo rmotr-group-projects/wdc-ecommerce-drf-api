@@ -116,10 +116,10 @@ Example payload
 - `DELETE /api/products/<product_id>`
 
 
-### Tests
+### Tests
 
 In order to check if your implementation is correct, a couple of tests that should pass are implemented inside `api/tests.py`. You can run them this way:
 
-```bash
+```
 $ make test
 ```
