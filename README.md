@@ -34,6 +34,8 @@ A couple of Product objects are already loaded in your database, so you can test
 
 The following endpoints must be supported:
 
+##### LIST
+
 - `GET /api/products/`
 
 Example response:
@@ -62,6 +64,8 @@ Example response:
 ]
 ```
 
+##### DETAIL
+
 - `GET /api/products/<product_id>`
 
 Example response:
@@ -78,6 +82,8 @@ Example response:
 }
 ```
 
+##### CREATE
+
 - `POST /api/products/`
 
 Example payload
@@ -90,6 +96,8 @@ Example payload
     "price": 39.99
 }
 ```
+
+##### FULL UPDATE
 
 - `PUT /api/products/<product_id>`
 
@@ -104,6 +112,8 @@ Example payload
 }
 ```
 
+##### PARTIAL UPDATE
+
 - `PATCH /api/products/<product_id>`
 
 Example payload
@@ -112,6 +122,8 @@ Example payload
     "name": "Updated name"
 }
 ```
+
+##### DELETE
 
 - `DELETE /api/products/<product_id>`
 
