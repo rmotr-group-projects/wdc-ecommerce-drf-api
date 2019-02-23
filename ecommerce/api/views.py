@@ -11,7 +11,7 @@ class ProductViewSet(viewsets.ModelViewSet):
     # retrieve all objects from a table
     queryset = Product.objects.all()
     
-# 1. Did the views.py stuff ased on notes from class
+# 1. Did the views.py stuff based on notes from class
 # 2. Ran tests, got error viewsets not defined
 # 3. Included viewsets from class notes and looking online
 # 4. Ran tests again, all failed
