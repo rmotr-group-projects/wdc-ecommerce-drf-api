@@ -40,6 +40,7 @@ INSTALLED_APPS = [
 
     # third party apps
     'rest_framework',
+    'rest_framework.authtoken',
 
     # custom apps
     'api',
@@ -125,3 +126,27 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.1/howto/static-files/
 
 STATIC_URL = '/static/'
+
+# REST_FRAMEWORK = {
+#     'DEFAULT_AUTHENTICATION_CLASSES': (
+#         ### YOUR CODE HERE
+#     ),
+#     'DEFAULT_PERMISSION_CLASSES': (
+#         ### YOUR CODE HERE
+#     ),
+#     'DEFAULT_PAGINATION_CLASS': 'YOUR CODE HERE',
+#     'PAGE_SIZE': 'YOUR CODE HERE'
+# }
+REST_FRAMEWORK = {
+    'DEFAULT_AUTHENTICATION_CLASSES': (
+        'rest_framework.authentication.BasicAuthentication',
+        'rest_framework.authentication.TokenAuthentication',
+        'api.authentication.APIClientAuthentication',
+    ),
+    'DEFAULT_PERMISSION_CLASSES': (
+        'rest_framework.permissions.IsAuthenticated',
+    ),
+    'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.PageNumberPagination',
+    'PAGE_SIZE': 3
+
+}
