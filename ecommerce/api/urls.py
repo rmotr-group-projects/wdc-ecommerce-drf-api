@@ -7,9 +7,9 @@ from api import views
 
 
 router = DefaultRouter()
-
+router.register('products', views.ProductModelViewSet, base_name='products')
 # Register the 'products' urls in the router
-router.register('...')
+
 
 urlpatterns = []
 urlpatterns += router.urls
